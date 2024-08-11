@@ -1,0 +1,66 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/react": "^2.5.4",
+    "@coral-xyz/anchor": "^0.27.0",
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "@metaplex-foundation/js": "^0.18.3",
+    "@solana/spl-token": "^0.3.7",
+    "@solana/wallet-adapter-base": "^0.9.22",
+    "@solana/wallet-adapter-react": "^0.15.32",
+    "@solana/wallet-adapter-react-ui": "^0.9.31",
+    "@solana/wallet-adapter-wallets": "^0.19.16",
+    "@solana/web3.js": "^1.74.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.0.1",
+    "@testing-library/user-event": "^14.1.0",
+    "@types/jest": "^28.1.1",
+    "@types/node": "^12.0.0",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
+    "@types/react-transition-group": "^4.4.5",
+    "browserify-zlib": "^0.2.0",
+    "buffer-browserify": "^0.2.5",
+    "crypto-browserify": "^3.12.0",
+    "framer-motion": "^6.2.9",
+    "path-browserify": "^1.0.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-icons": "^4.11.0",
+    "react-scripts": "5.0.1",
+    "react-transition-group": "^4.4.5",
+    "stream-browserify": "^3.0.0",
+    "typescript": "^4.6.3",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "REACT_APP_STAGE=dev REACT_APP_RPC_URL=http://localhost:8899 craco start",
+    "start-devnet": "REACT_APP_STAGE=dev craco start",
+    "build": "REACT_APP_STAGE=dev REACT_APP_RPC_URL=https://rpc-dev.zedwars.com craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^7.1.0",
+    "@craco/types": "^7.1.0"
+  }
+}

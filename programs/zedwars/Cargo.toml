@@ -1,0 +1,33 @@
+[package]
+name = "zedwars"
+version = "0.2.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "zedwars"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = {version = "0.28.0", features = ["init-if-needed"] }
+anchor-spl = { version = "0.28.0", features = ["metadata"] }
+spl-token = { version = "3.5.0", features = ["no-entrypoint"] }
+solana-program = "~1.16.15"
+mpl-token-metadata = { version = "~1.13.2", features = ["no-entrypoint"] }
+arrayref = "0.3.7"
+bubblegum-cpi = { rev = "a2d12e4a157d91feb73aa40a97fe297fd477dd87", git = "https://github.com/helium/account-compression-anchor-gen.git", features = ["cpi"]}
+account-compression-cpi = { rev = "a2d12e4a157d91feb73aa40a97fe297fd477dd87", git = "https://github.com/helium/account-compression-anchor-gen.git", features = ["cpi"]}
+mpl-bubblegum = "=1.0.0"
+spl-account-compression = { version="0.1.8", features = ["cpi"] }
+
+[dev-dependencies]
+solana-sdk = "~1.16.15"
+solana-program-test = "~1.16.15"
+

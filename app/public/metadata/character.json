@@ -1,0 +1,17 @@
+{
+    "name": "ZedWars Character",
+    "description": "A character in the ZedWars game universe",
+    "image": "http://localhost:3000/images/character.jpeg?ext=jpeg",
+    "animation_url": "https://arweave.net/ZAultcE_eAzv26YdhY1uu9uiA3nmDZYwP8MwuiA3nm?ext=glb",
+    "external_url": "http://localhost:3000",
+    "attributes": [
+      {
+        "trait_type": "trait1",
+        "value": "value1"
+      },
+      {
+        "trait_type": "trait2",
+        "value": "value2"
+      }
+    ]
+  }

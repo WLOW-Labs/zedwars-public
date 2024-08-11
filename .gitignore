@@ -1,0 +1,18 @@
+.anchor
+.DS_Store
+**/*.rs.bk
+node_modules
+test-ledger
+.yarn
+# Ignore everything in the target directory
+target/*
+# Don't ignore target/deploy directory
+!target/deploy
+# Ignore everything in target/deploy directory
+target/deploy/*
+# But don't ignore bubblegum.so
+!target/deploy/bubblegum.so
+!target/deploy/compression.so
+!target/deploy/noop.so
+operator.json
+target/deploy/zedwars-keypair.json

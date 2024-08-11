@@ -1,0 +1,49 @@
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+zedwars = "zwars5DyyarECuXn4rUCrGbrf1BV598tCRbSSHDjJKA"
+
+[programs.devnet]
+zedwars = "zwars5DyyarECuXn4rUCrGbrf1BV598tCRbSSHDjJKA"
+
+[workspace]
+types = "sdk/"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "https://devnet.helius-rpc.com/?api-key=e5c039f0-477f-4fdb-a516-060fda57b12f"
+wallet = "./operator.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
+[[test.genesis]]
+address = "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
+program = "./target/deploy/mpl_token_metadata.so"
+
+[[test.genesis]]
+address = "BGUMAp9Gq7iTEuizy4pqaxsTyUCBK68MDfK752saRPUY"
+program = "./target/deploy/bubblegum.so"
+
+[[test.genesis]]
+address = "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
+program = "./target/deploy/mpl_token_metadata.so"
+
+[[test.genesis]]
+address = "noopb9bkMVfRPU8AsbpTUg8AQkHtKwMYZiFUjNRtMmV"
+program = "./target/deploy/noop.so"
+
+[[test.genesis]]
+address = "cmtDvXumGCrqC1Age74AVPhSRVXJMd8PJS91L8KbNCK"
+program = "./target/deploy/compression.so"
+
+
+[test.validator]
+ticks_per_slot = 8
+
+[test]
+startup_wait = 100000
